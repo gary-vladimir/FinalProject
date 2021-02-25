@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap');
+
+$navFooter: #1b1b1b;
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #212529;
+    position: relative;
+}
+
+nav {
+    background-color: $navFooter;
+    height: 70px;
+    color: #dee2e6;
+    padding-left: 25px;
+    line-height: 70px;
+}
+
+#title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #dee2e6;
+    text-align: center;
+    font-size: 2.2em;
+}
+
+form {
+    border-radius: 8px;
+    background-color: #343a40;
+    width: 60%;
+    height: 90px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+#inp {
+    width: 100%;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: center;
+}
+
+#departure,
+#destination:focus {
+    outline: none;
+}
+
+#departure,
+#destination {
+    width: 47%;
+    height: 40px;
+    margin: 5px;
+    background-color: #dee2e6;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
+#submit {
+    transition: box-shadow 0.3s;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top: 85px;
+    background-color: aquamarine;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    -webkit-appearance: none;
+}
+
+#submit:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+#uknownCard {
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+    margin-top: 70px;
+    background-color: #343a40;
+    width: 60%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    #landscape {
+        width: 50%;
+        margin-bottom: -6px;
+
+        border-top-left-radius: 8px;
+    }
+    article {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 48%;
+        height: 80%;
+
+        h2 {
+            color: #dee2e6;
+            text-decoration: none;
+            font-weight: 100;
+        }
+    }
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 2.5vw;
+    margin-bottom: -8%;
+}
+
+#logo {
+    height: 70px;
+    font-size: 1em;
+}
+
+h3 {
+    font-weight: 100;
+    color: #adb5bd;
+    font-size: 1.6vw;
+}
+
+#weather {
+    margin-top: -10%;
+    position: absolute;
+    width: 50%;
+}
+
+#description,
+#temperature {
+    padding-left: 50%;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0em;
+    margin-inline-end: 0em;
+}
+
+#temperature,
+#description {
+    color: white;
+    font-family: 'Lexend Giga', sans-serif;
+}
+#description {
+    font-size: 1.5vw;
+}
+
+#temperature {
+    font-size: 4.5vw;
+}
+
+em {
+    font-style: normal;
+    color: coral;
+}
+
+#submit:hover,
+#uknownCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    height: 70px;
+    width: 100vw;
+    line-height: 70px;
+    color: lightgrey;
+    background-color: $navFooter;
+}
+
+#saveTrip {
+    width: 100%;
+    color: black;
+    background-color: #b8f2e6;
+    height: 3em;
+    cursor: pointer;
+    text-align: center;
+    line-height: 3em;
+    font-size: 1em;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#loadCont {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-35px);
+    margin-top: 45vh;
+    z-index: 2;
+}
+
+#background_loading {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+}
+
+#loader {
+    display: none;
+    z-index: 2;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #title {
+        font-size: 1.3em;
+    }
+
+    #uknownCard,
+    form {
+        width: 90%;
+    }
+    #submit {
+        font-size: 15px;
+    }
+
+    #departure,
+    #destination {
+        font-size: 0.9em;
+    }
+
+    form {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    h3 {
+        font-size: 2.5vw;
+    }
+    h2 {
+        font-size: 3.7vw;
+    }
+
+    #temperature {
+        font-size: 7vw;
+    }
+
+    #description {
+        font-size: 2.5vw;
+    }
+}

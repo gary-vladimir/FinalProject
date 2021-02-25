@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="icon"
+            type="image/png"
+            href="./src/client/styles/Airline-Mode-icon.png"
+        />
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
+
+        <title>TravelAPP</title>
+    </head>
+    <body>
+        <nav>TravelAPP</nav>
+        <main>
+            <div id="background_loading"></div>
+            <div id="loadCont"><div id="loader"></div></div>
+
+            <div id="title">where would you travel next?</div>
+
+            <form onsubmit="Client.getcoordinates(event)">
+                <div id="inp">
+                    <input
+                        type="text"
+                        id="destination"
+                        placeholder="I would like to travel to..."
+                    />
+                    <input type="date" id="departure" />
+
+                    <input type="submit" value="Generate" id="submit" />
+                </div>
+            </form>
+            <div id="uknownCard">
+                <img
+                    id="landscape"
+                    src="https://cdn.pixabay.com/photo/2017/06/17/10/55/hot-air-balloon-2411851_960_720.jpg"
+                    alt="uknown"
+                />
+                <article>
+                    <h2 id="desTitle">Uknown Destination</h2>
+                    <h3>Your trip Is in <em id="isIn">Uknown</em></h3>
+
+                    <img
+                        src="./src/client/styles/svg/unknown.svg"
+                        alt="uknownTime"
+                        id="weather"
+                    />
+                    <div id="dataCont">
+                        <h3 id="temperature">?°C</h3>
+                        <h3 id="description">Description?</h3>
+                    </div>
+                </article>
+                <div id="saveTrip">Save Trip</div>
+            </div>
+        </main>
+        <footer>TravelAPP 2021</footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
