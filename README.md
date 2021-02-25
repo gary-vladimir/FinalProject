@@ -17,3 +17,7 @@ Download the zip file and cd into the folder
 -   `npm run start` to start the app
 -   this app runs on localhost:8000
 -   `npm run test` to make testing with jest
+
+## Extend Options / Ways to Stand Out
+
+for this project i decided to use weather icons
