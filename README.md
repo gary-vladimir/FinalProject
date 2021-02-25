@@ -4,7 +4,7 @@ The goal of this repo is be an example of a basic but functional app built on Ex
 
 This application asks the user for a desired city and
 a departure date if the departure date is less than 7 days
-the application will show the user the current weather of the destination otherwise it will show the predicted weather of the departure date
+the application will show the user the current weather of the destination otherwise it will show the predicted weather of the departure date, if the user decides to he can save the trip and every time he opens the app it will show the last saved trip
 
 ## Get Up and Running
 
